@@ -17,11 +17,10 @@ body
 
 .navbar
 {
-    background-color: rgba(55, 55, 55, 0.57);
+    background-color: rgba(55, 55, 55, 0.7);
     position: fixed;
     z-index: 100;
     width:100%;
-    /* background-color: aqua; */
 }
 .navbar .navbar-elements
 {
@@ -29,7 +28,6 @@ body
    flex-wrap: wrap;
    align-items: center;
     justify-content: space-between;
-    /* background-color: blanchedalmond; */
 }
 
 .navbar .logo
@@ -49,13 +47,11 @@ body
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-   /* background-color: teal; */
    align-items: center;
 }
 .navbar .links ul li
 {
     padding: 0 20;
-    /* background-color: tomato; */
 }
 .navbar .links ul li a
 {
@@ -96,9 +92,56 @@ color: #ff305b;
     color:#ff305b;
 }
 .home .caption p{
- font-weight: 300;
- font-size: 20;
+
+ font-size: 24;
 }
+.home .caption p::after
+{
+    content: "Designer|";
+    animation: typing 3s 1s infinite ;
+    color: #ff305b;
+}
+
+
+@keyframes typing
+{
+    0%{  content: "Designer|";}
+    3%{  content: "Designe|";}
+    6%{  content: "Design|";}
+    9%{  content: "Desig|";}
+    12%{  content: "Desi|";}
+    15%{  content: "Des|";}
+    18%{  content: "De|";}
+    21%{  content: "D|";}
+    24%{  content: "|";}
+    27%{  content: "D|";}
+    30%{  content: "De|";}
+    33%{  content: "Dev|";}
+    36%{  content: "Deve|";}
+    39%{  content: "Devel|";}
+    42%{  content: "Develo|";}
+    45%{  content: "Develop|";}
+    48%{  content: "Develope|";}
+    51%{  content: "Developer|";}
+    54%{  content: "Develop|";}
+    57%{  content: "Develo|";}
+    60%{  content: "Devel|";}
+    63%{  content: "Deve|";}
+    66%{  content: "Dev|";}
+    69%{  content: "De|";}
+    72%{  content: "D|";}
+    75%{  content: "|";}
+    78%{  content: "D|";}
+    81%{  content: "De|";}
+    84%{  content: "Des|";}
+    87%{  content: "Desi|";}
+    90%{  content: "Desig|";}
+    93%{  content: "Design|";}
+    96%{  content: "Designe|";}
+    100%{  content: "Designer|";}
+}
+
+
 /* end of Home */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -287,22 +330,6 @@ background-color: #ff305b;
     background-color: #ff305b;
 }
 
-/* .services .spaceline
-{
-    width: 7%;
-    margin:4 auto;
-    height:1;
-    background-color:  #ff305b;
-}
-.services .sp2
-{
-    width: 14%;
-}
-.services .sp3
-{
-margin-bottom: 40;
-} */
-
 .services .sp3
 {
 margin-bottom: 40;
@@ -311,7 +338,6 @@ margin-bottom: 40;
 {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .srevices-items .item
@@ -494,9 +520,6 @@ margin-bottom: 30;
 
 .feedback .feedcover
 {
-    /* حل تاني للحته الحمرا اللي على الطرف انك تعمل لنير جرادينت */
-    /* background: linear-gradient(-220deg,#ff305b 20% ,#f1f1f1 20%, #f1f1f1 100%); */
-
     background-color:#f1f1f1;
     display: flex;
     border-radius: 5px;
@@ -504,7 +527,6 @@ margin-bottom: 30;
     margin: auto;
     padding: 40;
     position: relative;
-    
 }
 
 .feedback .feedcover .red
@@ -519,17 +541,6 @@ margin-bottom: 30;
     position: absolute;
     top: 0;
     left: 0;
-    
-/* داحل تاني للحتة الحمرا اللى على الجنب مع عمل اوفر فلو للبايرنت اللى هوه feedcover */
-    /* width: 200;
-    height: 350;
-    transform: rotate(45deg);
-    background-color: #ff305b;
-    position: absolute;
-    top: -130;
-    left: -100; */
-
-
 }
 .feedcover-image
 {
@@ -537,7 +548,6 @@ margin-bottom: 30;
     align-self: center;
     position: relative;
     z-index: 2;
-    /* background-color: brown; */
 }
 .feedcover-image img
 {
@@ -634,7 +644,6 @@ width: 100%;
 {
     padding-bottom:56.166%;
     position: relative;
-    
 }
 .blog-items .item iframe
 {
@@ -682,7 +691,6 @@ color: #ff305b;
 
 .contact
 {
-
     padding: 80 0;
 }
 
@@ -797,14 +805,6 @@ color:#ff305b ;
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 
-
-
-
-
-
-
-
-
 @media all and (max-width:1200px)
 {
     .container
@@ -915,6 +915,7 @@ color:#ff305b ;
     .navbar .logo
     {
         text-align: center;
+        padding: 0 0;
     }
     .navbar .links
     {
@@ -955,7 +956,6 @@ color:#ff305b ;
     .info
     {
     width: 100%;
-    /* text-align: center; */
     padding:25 0 0 ;
     }
     .info-bottom-details ul
