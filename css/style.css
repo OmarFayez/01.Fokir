@@ -21,6 +21,7 @@ body
     position: fixed;
     z-index: 100;
     width:100%;
+    overflow: hidden;
 }
 .navbar .navbar-elements
 {
@@ -568,7 +569,7 @@ margin-bottom: 30;
 {
     padding: 7 0 15;
 }
-
+z
 .feedcover-content h5 a
 {
   text-decoration: none;
@@ -772,7 +773,7 @@ transition: background-color .5s;
 
 .footer
 {
-    padding: 80 0;
+    padding: 15 0;
     background-color: #333333 ;
     text-align: center;
     color: white;
@@ -785,7 +786,7 @@ color:#ff305b ;
 
 .footer-icons
 {
-    margin: 15;
+    margin: 0 0 8px 8px ;
 }
 .footer-icons i
 {
@@ -1051,4 +1052,53 @@ color:#ff305b ;
     width: 100%;
     }
     /* End Of <Contact/> */
+}
+
+@media all and (max-width:576px)
+{
+
+    .container
+    {
+        width: 300px;
+        margin: auto;
+        padding: 0 15;
+    }
+    .navbar .navbar-elements
+    {
+   flex-direction: column;
+   flex-wrap: wrap;
+    }
+    .navbar .logo
+    {
+        text-align: center;
+        padding: 0 0;
+    }
+    .navbar .links
+    {
+    width: 100%;
+    }
+    .navbar .links ul
+    {
+        overflow: hidden;
+     flex-direction: row;
+       justify-content: space-between;
+       flex-wrap: wrap;
+    }
+    .navbar .links ul li
+    {
+    padding: 0 0;
+    }
+    .navbar .links ul li a
+    {
+    font-size: 16; 
+    }
+    .services h2 
+    {
+    width: 275px;
+    }
+
+    .info-bottom-buttons a i
+    {
+        padding-left: 0px;
+}
 }
