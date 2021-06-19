@@ -73,7 +73,7 @@ color: #ff305b;
 .home .caption
 {
     background-image: url(../images/background.png);
-    height:100vh;
+    min-height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,6 +146,48 @@ color: #ff305b;
 /* end of Home */
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
+
+/* ALL Sections */
+h2 
+{
+    width: 400px;
+    /* background-color: aqua; */
+    margin: auto;
+    font-size:40;
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15;
+} 
+ h2::before
+{
+    content: "";
+    position: absolute;
+    top:110%;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 90px;
+    height: 20%;
+    border-style: solid;
+    border-color: #ff305b;
+    border-width: 1px 0;
+}
+ h2::after
+{
+    content: "";
+    position: absolute;
+    top:121%;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 140px;
+    height: 1px;
+    background-color: #ff305b;
+}
+ .sp3
+{
+margin-bottom: 40;
+}
+/* ALL Sections */
 
 
 
@@ -221,12 +263,12 @@ color:#ff305b;
 }
 
 
-.info .info-top  h2{
+.info .info-top  h3{
     padding-left: 15;
     font-size: 34;
     position: relative;
 }
-.info .info-top  h2::before
+.info .info-top  h3::before
 {
 content: "";
 position: absolute;
@@ -297,44 +339,6 @@ background-color: #ff305b;
     padding: 80 0;
 }
 
-.services h2 
-{
-    width: 400px;
-    /* background-color: aqua; */
-    margin: auto;
-    font-size:40;
-    font-weight: 800;
-    text-align: center;
-    position: relative;
-    padding-bottom: 15;
-} 
-.services h2::before
-{
-    content: "";
-    position: absolute;
-    top:110%;
-    left: 40%;
-    width: 90px;
-    height: 10px;
-    border-style: solid;
-    border-color: #ff305b;
-    border-width: 1px 0;
-}
-.services h2::after
-{
-    content: "";
-    position: absolute;
-    top:118%;
-    left: 34%;
-    width: 140px;
-    height: 1px;
-    background-color: #ff305b;
-}
-
-.services .sp3
-{
-margin-bottom: 40;
-}
 .srevices-items
 {
     display: flex;
@@ -375,29 +379,6 @@ transform: scale(1.2);
 .portfolio
 {
     padding: 80 0;
-}
-
-.portfolio h2 
-{
-    font-size:40;
-    font-weight: 800;
-    text-align: center;
-} 
-
-.portfolio .spaceline
-{
-    width: 7%;
-    margin:4 auto;
-    height:1;
-    background-color:  #ff305b;
-}
-.portfolio .sp2
-{
-    width: 14%;
-}
-.portfolio .sp3
-{
-margin-bottom: 20;
 }
 
 .portfolio p
@@ -496,29 +477,6 @@ flex-wrap: wrap;
 }
 
 
-.feedback-top h2 
-{
-    font-size:40;
-    font-weight: 800;
-    text-align: center;
-} 
-
-.feedback-top .spaceline
-{
-    width: 7%;
-    margin:4 auto;
-    height:1;
-    background-color:  #ff305b;
-}
-.feedback-top .sp2
-{
-    width: 14%;
-}
-.feedback-top .sp3
-{
-margin-bottom: 30;
-}
-
 .feedback .feedcover
 {
     background-color:#f1f1f1;
@@ -601,29 +559,6 @@ z
     padding: 80 0;
 }
 
-.blog-top h2 
-{
-    font-size:40;
-    font-weight: 800;
-    text-align: center;
-} 
-
-.blog-top .spaceline
-{
-    width: 7%;
-    margin:4 auto;
-    height:1;
-    background-color:  #ff305b;
-}
-.blog-top .sp2
-{
-    width: 14%;
-}
-.blog-top .sp3
-{
-margin-bottom: 30;
-}
-
 .blog-items
 {
     display: flex;
@@ -693,29 +628,6 @@ color: #ff305b;
 .contact
 {
     padding: 80 0;
-}
-
-.contact-top h2 
-{
-    font-size:40;
-    font-weight: 800;
-    text-align: center;
-} 
-
-.contact-top .spaceline
-{
-    width: 7%;
-    margin:4 auto;
-    height:1;
-    background-color:  #ff305b;
-}
-.contact-top .sp2
-{
-    width: 14%;
-}
-.contact-top .sp3
-{
-    margin-bottom: 30;
 }
 
 .contact-bottom
@@ -1059,7 +971,7 @@ color:#ff305b ;
 
     .container
     {
-        width: 300px;
+        width: 320px;
         margin: auto;
         padding: 0 15;
     }
@@ -1079,26 +991,31 @@ color:#ff305b ;
     }
     .navbar .links ul
     {
-        overflow: hidden;
-     flex-direction: row;
-       justify-content: space-between;
-       flex-wrap: wrap;
+        display: block;
     }
     .navbar .links ul li
     {
-    padding: 0 0;
+    display: inline-block;
+    width: 49%;
+    padding:0;
+    margin :0;
+    text-align: center;
     }
     .navbar .links ul li a
     {
     font-size: 16; 
     }
-    .services h2 
+     h2 
     {
     width: 275px;
     }
 
     .info-bottom-buttons a i
     {
-        padding-left: 0px;
-}
+        padding-left: 0px;  
+    }
+    .feedback h2
+    {
+        font-size: 30px;
+    }
 }
