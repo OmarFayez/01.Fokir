@@ -4,6 +4,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+
+}
+html
+{
+    scroll-behavior:smooth;
+}
 body
 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -17,59 +25,69 @@ body
 
 .navbar
 {
-    background-color: rgba(55, 55, 55, 0.7);
+    background-color: rgba(55, 55, 55, .9);
     position: fixed;
     z-index: 100;
     width:100%;
-    overflow: hidden;
+    align-items: center;
 }
-.navbar .navbar-elements
+.navbar-elements
 {
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
+    display: flex;
     justify-content: space-between;
+    position: relative;
 }
-
 .navbar .logo
 {
-    width: 20%;
-    padding: 10 0;
+    padding: 12 0;
 }
 .navbar .logo a
 {
-    text-decoration: none;
-    font-size: 24px;
+    font-size: 25px;
     color: ff305b;
     font-weight: 600;  
 }
-.navbar .links ul
+.navbar ul
 {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-   align-items: center;
+    align-items: center;
 }
-.navbar .links ul li
+.navbar ul li
 {
-    padding: 0 20;
+    padding: 0 10;
 }
-.navbar .links ul li a
+.navbar ul li a 
 {
-    text-decoration: none;
-    color: #fff;
     font-size: 18; 
-    transition: color 1s;
+    transition: color .5s;
+    color: #fff;
 }
-.navbar .links ul li a:hover{
+.navbar ul li a:hover{
     color: #ff305b;
 }
-
-.navbar .links ul li .a-home
+.bar
 {
-color: #ff305b;
+    position: relative;
+      display: none;
 }
-
+.bar i
+{
+    position: absolute;
+    color: #fff;
+    font-size: 20px; 
+    transition: color .5s;
+    cursor: pointer;
+}
+.bar i:hover{
+    color: #ff305b;
+} 
+input[type="checkbox"]
+{
+    -webkit-appearance:none;
+    display: none;
+}
+/* End Of Nav */
 .home .caption
 {
     background-image: url(../images/background.png);
@@ -150,33 +168,33 @@ color: #ff305b;
 /* ALL Sections */
 h2 
 {
-    width: 400px;
-    /* background-color: aqua; */
     margin: auto;
     font-size:40;
     font-weight: 800;
     text-align: center;
     position: relative;
     padding-bottom: 15;
+    /* background-color: brown; */
 } 
  h2::before
 {
     content: "";
     position: absolute;
-    top:110%;
+    bottom:-10px;
     left: 50%;
     transform: translatex(-50%);
     width: 90px;
-    height: 20%;
+    height: 11px;
     border-style: solid;
     border-color: #ff305b;
     border-width: 1px 0;
+    /* background-color: aqua; */
 }
  h2::after
 {
     content: "";
     position: absolute;
-    top:121%;
+    bottom:-4px;
     left: 50%;
     transform: translatex(-50%);
     width: 140px;
@@ -745,10 +763,10 @@ color:#ff305b ;
     margin: auto;
     padding: 0 15;
 }
-    .navbar .links ul li
+    /* .navbar .links ul li
     {
     padding: 15 8;
-    }
+    } */
     .about .profile
     {
     width:50%;
@@ -816,40 +834,70 @@ color:#ff305b ;
 
     .container
     {
-        width: 480;
+        width: 525;
         margin: auto;
         padding: 0 15;
     }
-    .navbar .navbar-elements
-    {
-   flex-direction: column;
-   flex-wrap: nowrap;
-    }
-    .navbar .logo
-    {
-        text-align: center;
-        padding: 0 0;
-    }
-    .navbar .links
-    {
+    .navbar-elements
+{
+    display: flex;
+    flex-direction: column;
+}
+.navbar ul
+{
+flex-direction: column;
+text-align: center;
+}
+.navbar ul li
+{
     width: 100%;
-    }
-    .navbar .links ul
-    {
-       justify-content: space-between;
-       flex-wrap: nowrap;
-    }
-    .navbar .links ul li
-    {
     padding: 0 0;
-    }
-    .navbar .links ul li a
-    {
-    font-size: 16; 
-    }
+    transition:  background-color .5s;
+}
 
-/* End Of <Home/> */
+.navbar ul li a 
+{
+    display: block;
+    font-size: 18; 
+    padding: 4 0;
+    transition: color .5s,background-color .5s;
+}
+.navbar ul a:hover{
+    color: #ff305b;
+    background-color: rgba(55, 55, 55, 0.8);
+}
 
+.bar
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+   display: block;
+   cursor: pointer;
+}
+.home .bar #times
+{
+    display: none;
+}
+/* لازم تكتب المسار من اول بايرنت بيقابل الانبت علشان يعرف يدخل ليه  */
+#check:checked ~ .home .bar #times
+{
+    display: block;
+}
+#check:checked ~ .home .bar #bars
+{
+    display: none;
+} 
+.navbar ul
+{
+ height: 0;
+ overflow: hidden;
+ transition: height .5s;
+}
+#check:checked ~ .home .navbar ul
+{
+    height: 220px;
+}
 .about .about-elements
 { 
     justify-content: center;
@@ -975,40 +1023,6 @@ color:#ff305b ;
         margin: auto;
         padding: 0 15;
     }
-    .navbar .navbar-elements
-    {
-   flex-direction: column;
-   flex-wrap: wrap;
-    }
-    .navbar .logo
-    {
-        text-align: center;
-        padding: 0 0;
-    }
-    .navbar .links
-    {
-    width: 100%;
-    }
-    .navbar .links ul
-    {
-        display: block;
-    }
-    .navbar .links ul li
-    {
-    display: inline-block;
-    width: 49%;
-    padding:0;
-    margin :0;
-    text-align: center;
-    }
-    .navbar .links ul li a
-    {
-    font-size: 16; 
-    }
-     h2 
-    {
-    width: 275px;
-    }
 
     .info-bottom-buttons a i
     {
@@ -1016,6 +1030,6 @@ color:#ff305b ;
     }
     .feedback h2
     {
-        font-size: 30px;
+        font-size: 35px;
     }
 }
