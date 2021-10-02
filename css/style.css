@@ -838,7 +838,7 @@ color:#ff305b ;
         margin: auto;
         padding: 0 15;
     }
-    .navbar-elements
+.navbar-elements
 {
     display: flex;
     flex-direction: column;
